@@ -45,15 +45,46 @@ FlappyMonster.prototype.runGameLoop = function() {
 FlappyMonster.prototype.drawInitialScreen = function() {
   // Base
   var game = this;
+  // Draw
+  
+  // Background
+  game.context.fillstyle = 'black';
+  game.context.fillRect(0, 0, game.canvas.width, game.canvas.height);
+  
+  //Text 
+  game.context.fillstyle = 'white';
+  game.context.font = '36px Arial';
+  game.context.fillText('INITIAL', game.canvas.width / 2 - 100, game.canvas.height / 2);
 }
 FlappyMonster.prototype.drawGamePlayingScreen = function() {
   // Base
   var game = this;
-}
+  // Draw
+  
+  // Background
+  game.context.fillstyle = 'black';
+  game.context.fillRect(0, 0, game.canvas.width, game.canvas.height);
+  
+  //Text 
+  game.context.fillstyle = 'white';
+  game.context.font = '36px Arial';
+  game.context.fillText('INITIAL', game.canvas.width / 2 - 100, game.canvas.height / 2);
+};
+
 FlappyMonster.prototype.drawGameOverScreen = function() {
   // Base
   var game = this;
-}
+  // Draw
+  
+  // Background
+  game.context.fillstyle = 'black';
+  game.context.fillRect(0, 0, game.canvas.width, game.canvas.height);
+  
+  //Text 
+  game.context.fillstyle = 'white';
+  game.context.font = '36px Arial';
+  game.context.fillText('INITIAL', game.canvas.width / 2 - 100, game.canvas.height / 2);
+};
 
 
 
