@@ -30,7 +30,15 @@ function FlappyMonster(canvas) {
   
   
 }
+FlappyMonster.prototype.drawGamePlayingScreen = function() {
+  game.background.draw();
+// Clear Canvas
+  game.context.clearRect(0, 0, game.canvas.width, game.canvas.height);
 
+}
+  
+  
+  
 FlappyMonster.prototype.createObjects = function() {
   // Base
   var game = this;
