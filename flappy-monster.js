@@ -47,7 +47,8 @@ FlappyMonster.prototype.createObjects = function() {
   // Wall Factory
   game.wallFactory = new WallFactory(game.canvas);
 
-  
+  game.background = new GameBackground('back.png', game.canvas);
+
   // Monster
   game.monster = new Monster('monster.png', game.canvas);
   
