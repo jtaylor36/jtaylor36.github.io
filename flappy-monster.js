@@ -54,6 +54,8 @@ FlappyMonster.prototype.createObjects = function() {
   
   // Wall Factory
   game.wallFactory = new WallFactory(game.canvas);
+  game.wallFactory.generateWalls();
+
 
   game.background = new GameBackground('back.png', game.canvas);
 
@@ -174,8 +176,24 @@ FlappyMonster.prototype.drawGamePlayingScreen = function() {
   
    // Draw Walls
   game.drawWalls();
+   console.log(game.wallFactory.walls);  
+  FlappyMonster.prototype.drawWalls = function() {
+  // Base
+  var game = this;
 
- //console.log(game.wallFactory.walls);
+  // Draw Walls
+  var walls = game.wallFactory.walls;
+
+  for(var i = 0; i < walls.length; i++){
+    walls[i].draw();
+    walls[i].x = walls[i].x - game.velocity;
+  }
+
+
+};
+
+
+
 // Draw Monster
   game.monster.draw();
 
@@ -247,6 +265,8 @@ FlappyMonster.prototype.removeExtraWalls = function() {
     if(walls[i].x + walls[i].w < 0){
       // remove
       walls.shift();
+      
+  game.removeExtraWalls();
     }
   }
 };
